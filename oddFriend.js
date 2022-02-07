@@ -1,6 +1,6 @@
 function oddFriend(friends) {
   for (const friend of friends) {
-    if (friend.length == 0) {
+    if (friend.length == 0 || typeof friend != "string") {
       return "Invalid input";
     } else if (friend.length % 2 != 0) {
       return friend;

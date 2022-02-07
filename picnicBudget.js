@@ -2,9 +2,9 @@ function picnicBudget(persons) {
   var firstBatchInitialCost = 5000;
   var secondBatchInitialCost = 4000;
   var thirdBatchInitialCost = 3000;
-  if (persons < 0) {
+  if (persons < 0 || typeof persons != "number") {
     // testing invalid input
-    return "Invalid Input..! Please enter positive value";
+    return "Invalid Input";
   } else if (persons <= 100) {
     // when total person is smaller then 100
     const firstBatchCost = persons * firstBatchInitialCost;

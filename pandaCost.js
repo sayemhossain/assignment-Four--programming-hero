@@ -1,6 +1,13 @@
 function pandaCost(senggaraQuantity, samusaQuantity, jelapiQuantity) {
   // valid input checker
-  if (senggaraQuantity < 0 || samusaQuantity < 0 || jelapiQuantity < 0) {
+  if (
+    senggaraQuantity < 0 ||
+    samusaQuantity < 0 ||
+    jelapiQuantity < 0 ||
+    typeof senggaraQuantity != "number" ||
+    typeof samusaQuantity != "number" ||
+    typeof jelapiQuantity != "number"
+  ) {
     return "Invalid input";
   } else {
     const senggaraPrice = senggaraQuantity * 7;
@@ -11,5 +18,5 @@ function pandaCost(senggaraQuantity, samusaQuantity, jelapiQuantity) {
   }
 }
 
-const totalPrice = pandaCost(1, 1, 1);
+const totalPrice = pandaCost(3, 1, 1);
 console.log(totalPrice);
